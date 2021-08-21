@@ -34,11 +34,16 @@ public class FirstController {
     public String calcPage(@RequestParam(value = "action",required = false) String action,@RequestParam(value = "a",required = true)Integer a,@RequestParam(value = "b",required = true)Integer b,Model model){
         double result = 0;
         switch(action){
-            case "multiplication": if(a!=0&&b!=0){result =a*(double)b;break;
-            }else{action="Illegal action attempt!";break;}
+            case "multiplication": if(a!=0&&b!=0){result =a*(double)b;
+            }else{action="Illegal action attempt!";
+            }
+                break;
             case "addition": result =a+b; break;
             case "subtraction": result =a-b; break;
-            case "division":  if(a!=0&&b!=0){result=a/(double)b;break;}else{action="Illegal action attempt!";break;}
+            case "division":  if(a!=0&&b!=0){result=a/(double)b;
+            }else{action="Illegal action attempt!";
+            }
+                break;
             default: action="No operation chosen...";
                 break;
         }
