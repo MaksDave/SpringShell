@@ -1,19 +1,22 @@
 package ru.maksdave.springcourse.model;
 
 public class Person {
-    private Long id;
+    private int id;
     private String name;
 
-    public Person(Long id, String name) {
+    public Person() {
+    }
+
+    public Person(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
